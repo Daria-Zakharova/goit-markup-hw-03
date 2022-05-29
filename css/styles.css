@@ -1,4 +1,4 @@
-/* Global styles and vars */
+/* ------------Global styles and vars------------ */
 
 :root {
     --main-bg-color: #ffffff;
@@ -6,11 +6,13 @@
     --footer-bg-color: #2f303a;
     --accent-color: #2196f3;
 
-    --border-color: #eeeeee;
-
     --title-txt-color: #212121;
     --txt-color: #757575;
     --sec-txt-color: #ffffff;
+
+    --border-r: 4px;
+    --sect-interval: 94px;
+    --card-interval: 30px;
 }
 
 body {
@@ -25,6 +27,24 @@ body {
 h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+img {
+    display: block;
+}
+
+.hidden {
+
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .link {
@@ -42,10 +62,26 @@ h1, h2, h3, h4, h5, h6, p {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-    outline: solid sandybrown;
 }
-/* Navigation */
 
+/* ------------Header------------ */
+
+.header {
+    border-bottom: 1px solid #ececec;
+}
+
+.header .container, .header-menu, .header .list {
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    margin-left: 93px;
+}
+
+.header li:not(li:last-child){
+    margin-right: 50px;
+}
 
 .logo {
     font-family: 'Raleway', sans-serif;
@@ -64,6 +100,9 @@ h1, h2, h3, h4, h5, h6, p {
 
 .nav-link,
 .header .contacts {
+    display: block;
+    padding: 32px 0;
+    
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -73,7 +112,11 @@ h1, h2, h3, h4, h5, h6, p {
     color: var(--title-txt-color);
 }
 
-/* --Main-- */
+.header-contacts {
+    margin-left: auto;
+}
+
+/* ------------Hero------------ */
 
 .hero {
     padding: 200px 0;
@@ -94,11 +137,10 @@ h1, h2, h3, h4, h5, h6, p {
     color: var(--sec-txt-color);
 }
 
-/* --Buttons-- */
+/* ------------Buttons------------ */
 .button {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: none;
-    border-radius: 4px;
+    border-radius: var(--border-r);
 
     cursor: pointer;
 
@@ -112,7 +154,8 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-
+    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     color: var(--sec-txt-color);
     background-color: var(--accent-color);
 }
@@ -122,6 +165,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .filters .button {
+    padding: 0 20px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -131,30 +176,27 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: var(--section-bg-color);
 }
 
-.filters .button:hover,
-.filters .button:focus {
-    border: none;
-    outline: none;
-    color: var(--sec-txt-color);
-    background-color: var(--accent-color);
+.filters .button:not(li:last-child){
+    margin-right: 8px;
 }
 
-/* Headings */
+.filters .button:hover,
+.filters .button:focus {
+    color: var(--sec-txt-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 
-.section-title,
-.subtitle {
+/* ------------Headings------------ */
+.section-title {
+    margin-bottom: 50px;
+    
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
 
     color: var(--title-txt-color);
-}
-
-.section-title {
-    margin-bottom: 50px;
-
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-
 }
 
 .subtitle {
@@ -162,6 +204,9 @@ h1, h2, h3, h4, h5, h6, p {
 
     font-size: 16px;
     line-height: 1.19;
+    letter-spacing: 0.03em;
+
+    color: var(--title-txt-color);
 }
 
 .features .subtitle {
@@ -172,21 +217,32 @@ h1, h2, h3, h4, h5, h6, p {
 
 .staff .subtitle {
     margin: 30px auto 10px;
+
     font-weight: 500;
 }
 
 .projects .subtitle {
     margin-bottom: 4px;
+
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
 }
 
-/* Content */
+/* ------------Content------------ */
 .section:not(.staff) {
-    margin-bottom: 94px;
+    margin-bottom: var(--sect-interval);
+}
 
-    outline: solid teal;
+/* ------------Features------------ */
+
+.features .list {
+    display: flex;
+}
+
+.features li:not(li:last-child) {
+    margin-right: var(--card-interval);
+    padding-right: 1px;
 }
 
 .features .text {
@@ -195,32 +251,66 @@ h1, h2, h3, h4, h5, h6, p {
     letter-spacing: 0.03em;
 }
 
+/* ------------Specialization------------ */
+
+.specialization .list {
+    display: flex;
+}
+.specialization-card:not(li:last-child),
+.staff-card:not(li:last-child),
+.projects-card:not(li:nth-child(3n)){
+    margin-right: var(--card-interval);
+}
+
+/* ------------Staff------------ */
+
 .staff {
-    padding: 94px 0;
+    padding: var(--sect-interval) 0;
+
     background-color: var(--section-bg-color);
+}
+
+.staff .list {
+    display: flex;
 }
 
 .staff-card {
     padding-bottom: 30px;
-    /* text-align: center; */
-    background-color: var(--main-bg-color);
+    text-align: center;
 
-    outline: solid blue;
+    background-color: var(--main-bg-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-bottom-right-radius: var(--border-r);
+    border-bottom-left-radius: var(--border-r);
 }
 
+/* ------------Portfolio------------ */
+
 .filters {
+    display: flex;
+    justify-content: center;
     margin-bottom: 50px;
 }
 
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projects-card:not(li:nth-last-child(-n+3)) {
+    margin-bottom: var(--card-interval);
+}
+
 .projects-card {
-    outline: solid brown;
+    outline: solid 1px var(--border-color);
 }
 
 .projects-txt {
-    padding: 20px 24px
+    padding: 20px 24px;
 }
 
-/* Footer */
+/* ------------Footer------------ */
+
 .footer {
     padding: 60px 0;
 
@@ -228,7 +318,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .footer .logo {
-    display: inline-block;
+    display: block;
     margin-bottom: 20px;
     
     color: var(--sec-txt-color);

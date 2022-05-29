@@ -16,22 +16,25 @@
   <body>
     <!-- Header -->
 
-    <header class="section">
+    <header class="header section">
       <div class="container">
-        <nav class="navigation">
+        <div class="header-menu">
           <a class="logo link" href="./index.html"><span class="logo-accent">Web</span>Studio</a>
+          <nav class="navigation">
+            <ul class="list">
+              <li><a class="nav-link link" href="./index.html">Студия</a></li>
+              <li><a class="nav-link current link" href="./portfolio.html">Портфолио</a></li>
+              <li><a class="nav-link link" href="">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
         
+        <div class="header-contacts">
           <ul class="list">
-            <li><a class="nav-link link" href="./index.html">Студия</a></li>
-            <li><a class="nav-link current link" href="./portfolio.html">Портфолио</a></li>
-            <li><a class="nav-link link" href="">Контакты</a></li>
+            <li><a class="contacts link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+            <li><a class="contacts link" href="tel:+380961111111">+38 096 111 11 11</a></li>
           </ul>
-        </nav>
-        
-        <ul class="list">
-          <li><a class="contacts link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-          <li><a class="contacts link" href="tel:+380961111111">+38 096 111 11 11</a></li>
-        </ul>
+        </div>
       </div>
     </header>
 
@@ -40,7 +43,7 @@
     <main>
       <section class="section">
         <div class="container">
-          <h1 hidden>Наши проекты</h1>
+          <h1 class="hidden">Наши проекты</h1>
           <ul class="list filters">
             <li><button class="button" type="button">Все</button></li>
             <li><button class="button" type="button">Веб-сайты</button></li>
@@ -50,6 +53,7 @@
           </ul>
           
           <ul class="list projects">
+
             <li class="projects-card">
               <a class="link" href="">
                 <img src="./images/Portfolio/technokryak.jpg" alt="Главная страница сайта компании 'Технокряк'." width="370" />
