@@ -19,7 +19,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
 
     color: var(--txt-color);
     background-color: var(--main-bg-c);
@@ -90,13 +90,14 @@ img {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
+    letter-spacing: 0.02em;
 }
 
 .header .logo {
     display: block;
 
     margin-right: 93px;
-    padding: 32px 0;
+    padding: 24px 0;
 }
 
 .logo {
@@ -104,7 +105,6 @@ img {
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
-    letter-spacing: 0.03em;
 
     color: var(--title-txt-color);
 }
@@ -145,8 +145,6 @@ img {
 
 /* ------------Buttons------------ */
 .button {
-    padding: 10px 32px;
-
     border: none;
     border-radius: var(--border-r);
 
@@ -156,6 +154,11 @@ img {
 }
 
 .hero .button {
+    min-width: 200px;
+    min-height: 50px;
+
+    padding: 10px;
+
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
@@ -171,12 +174,12 @@ img {
 }
 
 .filters .button {
-    padding: 0 20px;
+    padding: 6px 22px;
 
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
-    letter-spacing: 0.03em;
+    letter-spacing: inherit;
 
     color: var(--title-txt-color);
     background-color: var(--section-bg-color);
@@ -201,14 +204,12 @@ img {
     text-align: center;
     font-size: 36px;
     line-height: 1.17;
-    letter-spacing: 0.03em;
 
     color: var(--title-txt-color);
 }
 
 .subtitle {
     margin-bottom: 10px;
-    letter-spacing: 0.03em;
 
     color: var(--title-txt-color);
 }
@@ -259,7 +260,6 @@ img {
 .features .text {
     font-size: 14px;
     line-height: 1.71;
-    letter-spacing: 0.03em;
 }
 
 /* ------------Specialization------------ */
@@ -300,6 +300,10 @@ img {
     text-align: center;
 }
 
+.staff p {
+    line-height: 1.18;
+}
+
 /* ------------Portfolio------------ */
 
 .filters {
@@ -328,6 +332,10 @@ img {
     border-top: none;
 }
 
+.projects-txt p {
+    line-height: 1.88;  
+}
+
 /* ------------Footer------------ */
 
 .footer {
@@ -347,12 +355,14 @@ img {
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
-    letter-spacing: 0.03em;
 
     color: var(--sec-txt-color);
 }
 
 .footer .contacts {
+    display: inline-block;
+    margin-top: 9px;
+
     color: rgba(255, 255, 255, 0.6);
 }
 
